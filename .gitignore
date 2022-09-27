@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 # version.py
-src/onnxmodel-utils/version.py
+src/onnxmodel_utils/version.py
