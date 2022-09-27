@@ -29,6 +29,8 @@ version = {attr = "onnxmodel_utils.version.version"}
 
 [tool.setuptools_scm]
 write_to = "src/onnxmodel_utils/version.py"
+version_scheme = "release-branch-semver"
+local_scheme = "no-local-version"
 
 [tools.black]
 line-length = 100
