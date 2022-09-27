@@ -12,7 +12,6 @@ from uuid import uuid4
 
 import numpy as np
 import onnx
-import onnx2torch as o2t
 import onnxruntime as ort
 import pandas as pd
 from loguru import logger
@@ -2151,11 +2150,6 @@ class Model(Base):
         self.infer_for_dq()
         self.infer_dtypes()
         self.simplify()
-
-    def to_torch(self):
-        model = o2t.convert(self.to_onnx_model())
-        model.eval()
-        return model
 
     def half(self):
         self.fake(DType.FLOAT, DType.FLOAT16)
