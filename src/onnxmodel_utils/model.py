@@ -2147,8 +2147,6 @@ class Model(Base):
             qmodel = onnx.load(qmodel_path)
         self.update_from_onnx(qmodel)
         self.prune()
-        self.infer_for_dq()
-        self.infer_dtypes()
         self.simplify()
 
     def half(self):
